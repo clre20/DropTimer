@@ -1,0 +1,44 @@
+name: DropTimer
+description: '${project.description}'
+prefix: DropTimer
+version: '${version}'
+
+main: clre20.dropTimer.DropTimer
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ Clre20 ]
+website: https://github.com/clre20/DropTimer
+
+commands:
+  dt:
+    description: DropTimer 掉落物消失時間設定
+    usage: /dt help
+    permission: droptimer.use
+    permission-message: 你沒有權限使用這個指令
+
+permissions:
+  droptimer.*:
+    description: DropTimer 所有權限
+    default: op
+    children:
+      droptimer.use: true
+      droptimer.set: true
+      droptimer.world: true
+      droptimer.item: true
+      droptimer.reload: true
+  droptimer.use:
+    description: 查看版本、說明與目前設定
+    default: op
+  droptimer.set:
+    description: 設定全域消失時間
+    default: op
+  droptimer.world:
+    description: 設定個別世界消失時間
+    default: op
+  droptimer.item:
+    description: 管理物品規則
+    default: op
+  droptimer.reload:
+    description: 重新讀取設定
+    default: op

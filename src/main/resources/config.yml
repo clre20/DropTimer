@@ -1,0 +1,32 @@
+# ==============================
+#  DropTimer 設定檔
+# ==============================
+
+# 設定檔版本，請勿修改
+config-version: 1
+
+# 訊息前綴（& 色碼）
+prefix: "&8[&eDropTimer&8] &r"
+
+# 全域消失時間：秒、分:秒 或 never（永不消失）
+# 例："90"、"1:30"、"5:00"、never
+# 原版為 5:00
+despawn-time: "5:00"
+
+# 個別世界的消失時間（沒列出的世界跟隨全域）
+# 例：
+# worlds:
+#   world_nether: "1:00"
+#   world_the_end: never
+worlds: {}
+
+# 聊天室輸入
+chat-input:
+  # 逾時秒數
+  timeout: 60
+  # 輸入這個字取消並返回介面
+  cancel-word: "取消"
+
+# 版本檢查（只提示，不會自動下載）
+update-checker:
+  enabled: true
