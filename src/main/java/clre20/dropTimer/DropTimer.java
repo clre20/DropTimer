@@ -60,7 +60,11 @@ public final class DropTimer extends JavaPlugin {
         Bukkit.getScheduler().runTask(this, () -> despawn.applyAll());
 
         warnAltDespawnRate();
-        updater.checkAsync(true);
+        if (getServer().getPluginManager().isPluginEnabled("HttpHub") && clre20.httpHub.api.HttpHubAPI.isAvailable()) {
+            clre20.httpHub.api.HttpHubAPI.registerUpdateCheck(this, "clre20/DropTimer", getPluginMeta().getVersion(), "droptimer.admin", null);
+        } else {
+            updater.checkAsync(true);
+        }
         getLogger().info("DropTimer 已啟用，全域消失時間 " + clre20.dropTimer.util.TimeUtil.format(config.getGlobalSeconds())
                 + "，物品規則 " + rules.all().size() + " 條");
     }

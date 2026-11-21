@@ -42,3 +42,5 @@ permissions:
   droptimer.reload:
     description: 重新讀取設定
     default: op
+
+softdepend: [ HttpHub ]

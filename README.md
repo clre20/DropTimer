@@ -2,6 +2,9 @@
 
 DropTimer 是一款專為 Paper 伺服器設計的掉落物消失時間控制插件。可以用指令設定全伺服器、個別世界的掉落物消失時間，也能透過遊戲內介面替特定物品（支援完整 NBT 比對）設定專屬時間，從幾秒到 99 分 59 秒，或是永不消失。設定變更後會立即套用到地上已存在的掉落物，不需重啟伺服器。
 
+
+> **版本檢查提示**：若伺服器有安裝 [HttpHub](https://github.com/clre20/HttpHub)，本插件自動由 HttpHub 集中處理版本檢查與管理員登入通知，避免各插件自開連線與背景執行緒。
+
 ## 功能特性
 
 * **三層時間設定**：
@@ -102,6 +105,9 @@ DropTimer 是一款專為 Paper 伺服器設計的掉落物消失時間控制插
 
 
 # DropTimer
+
+
+> **Update Checker**: When [HttpHub](https://github.com/clre20/HttpHub) is installed, update checks and operator login alerts are handled centrally by HttpHub via virtual threads, preventing redundant background connections.
 
 DropTimer is an item despawn timer plugin designed specifically for Paper (Minecraft 1.21.11, 26.1 – 26.3) servers. Set how long dropped items stay on the ground server-wide, per world, or per item through an in-game GUI with full NBT matching — anywhere from a few seconds to 99 minutes 59 seconds, or never. Changes apply instantly to items already on the ground, with no restart required.
 
